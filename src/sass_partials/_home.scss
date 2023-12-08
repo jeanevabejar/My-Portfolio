@@ -1,0 +1,49 @@
+@use "./base" as *;
+
+.homepage_container {
+  @include min(100%, 100vh);
+  @include max(100%, 100vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner_container {
+  @include min(90%, 90vh);
+  @include max(90%, 90vh);
+  display: flex;
+  position: relative;
+}
+
+.left_container {
+  @include min(85%, 90vh);
+}
+
+.homepage_text {
+  @include min(100%, 80vh);
+  @include max(100%, 80vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    @include min(60%, 60vh);
+    @include max(60%, 60vh);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-overflow: ellipsis;
+    h1 {
+      font-size: clamp(1rem, 2.5vw, 2.5rem);
+    }
+    span {
+      font-size: clamp(5rem, 10vw, 10rem);
+      font-weight: 500;
+    }
+    p {
+      font-size: clamp(1rem, 2.5vw, 2.5rem);
+      text-align: justify;
+    }
+  }
+}

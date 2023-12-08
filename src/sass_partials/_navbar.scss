@@ -1,0 +1,52 @@
+@use "./base" as *;
+
+.content_container {
+  @include min(100%, 10vh);
+  @include max(100%, 10vh);
+  display: flex;
+  align-self: start;
+  justify-self: flex-start;
+  padding-left: 1rem;
+
+  .inactive-navbar {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  .active-navbar {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+}
+
+.dropdown_container {
+  @include min(60%, 50vh);
+  @include max(60%, 50vh);
+  background: linear-gradient(
+    180deg,
+    rgba(233, 233, 231, 1) 6%,
+    rgba(233, 233, 231, 0.5298494397759104) 86%
+  );
+  position: absolute;
+  top: 4rem;
+
+  a {
+    font-size: clamp(1rem, 3vw, 3rem);
+    display: flex;
+    padding-left: 5rem;
+    padding-top: 2rem;
+    text-decoration: none;
+    color: black;
+  }
+}
