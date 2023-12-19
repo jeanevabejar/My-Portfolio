@@ -1,0 +1,60 @@
+@use "./base" as *;
+
+.contact_container {
+  @include min(15%, 90vh);
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.github_link {
+  transform: rotate(-90deg);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(0.8rem, 2.5vw, 2.5rem);
+  }
+  a:hover {
+    font-style: italic;
+  }
+}
+
+.linkedin_link {
+  transform: rotate(-90deg);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(0.5rem, 2.5vw, 2.5rem);
+  }
+  a:hover {
+    font-style: italic;
+  }
+}
+
+.contact_text {
+  min-width: 20vh;
+  transform: rotate(-90deg);
+  font-size: clamp(0.8rem, 2vw, 2rem);
+}
+
+.arrow_container {
+  width: clamp(5rem, 10vw, 10rem);
+  height: 2vh;
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .arrow {
+    width: 100%;
+    border-bottom: 2px solid black;
+  }
+}
